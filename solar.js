@@ -41,16 +41,16 @@ const controls = new OrbitControls(camera, renderer.domElement);
 camera.position.set(-90, 140, 140);
 controls.update();
 
-// //Mouse Position
-const mousePosition = new THREE.Vector2();
+//Mouse Position
+// const mousePosition = new THREE.Vector2();
 
-window.addEventListener("mousemove", function (e) {
-  mousePosition.x = (e.clientX / window.innerWidth) * 2 - 1;
-  mousePosition.y = -(e.clientY / window.innerHeight) * 2 + 1;
-});
+// window.addEventListener("mousemove", function (e) {
+//   mousePosition.x = (e.clientX / window.innerWidth) * 2 - 1;
+//   mousePosition.y = -(e.clientY / window.innerHeight) * 2 + 1;
+// });
 
 //Ray Claster
-const rayCaster = new THREE.Raycaster();
+// const rayCaster = new THREE.Raycaster();
 
 //Sun
 const sun = new Sphare(4, null, sunImg);
@@ -81,10 +81,9 @@ function createPlanet(size, texture, position, ring) {
 const murcury = new createPlanet(3.2, mercuryImg, 28);
 const venus = new createPlanet(5.8, venusImg, 44);
 const earth = new createPlanet(6, earthImg, 62);
-const earthId = earth.id;
 const mars = new createPlanet(4, marsImg, 78);
-const jupiter = new createPlanet(12, jupiterImg, 100);
-const saturn = new createPlanet(10, saturnImg, 138, {
+const jupiter = new createPlanet(4, jupiterImg, 78);
+const saturn = new createPlanet(10, saturnImg, 100, {
   innerRadius: 10,
   outerRadius: 20,
   color: null,
@@ -99,7 +98,7 @@ const uranus = new createPlanet(7, uranusImg, 176, {
   material: "basic",
 });
 const neptune = new createPlanet(7, neptuneImg, 200);
-const pluto = new createPlanet(2.8, plutoImg, 230);
+const pluto = new createPlanet(2.8, plutoImg, 216);
 
 // Ambient Light
 const ambientLight = new THREE.AmbientLight(0x333333);
@@ -149,26 +148,13 @@ function animate() {
   pluto.planetObj.rotateY(0.00007);
 
   //Ray Claster
-  rayCaster.setFromCamera(mousePosition, camera);
-  const intersects = rayCaster.intersectObjects(
-    [
-      murcury.planet,
-      venus.planet,
-      earth.planet,
-      mars.planet,
-      jupiter.planet,
-      saturn.planet,
-      uranus.planet,
-      neptune.planet,
-      pluto.planet,
-    ],
-    true
-  );
-  if (intersects.length > 0) {
-    renderer.domElement.style.cursor = "crosshair";
-  } else {
-    renderer.domElement.style.cursor = "auto";
-  }
+  // rayCaster.setFromCamera(mousePosition, camera);
+  // const intersects = rayCaster.intersectObjects(scene.children);
+  // for (let i = 0; i < intersects.length; i++) {
+  //   if (intersects[i].object.id === earthId) {
+  //     intersects[i].object.material.color.set(0xff0000);
+  //   }
+  // }
 
   renderer.render(scene, camera);
 }

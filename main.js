@@ -138,7 +138,6 @@ function onClick(event) {
   if (intersects.length > 0) {
     const clickedPlanet = intersects[0].object.userData.planetData;
     const { planet } = clickedPlanet;
-    console.log("Clicked", planet.name);
     window.location.href = `details.html?planet=${encodeURIComponent(
       planet.name
     )}`;
