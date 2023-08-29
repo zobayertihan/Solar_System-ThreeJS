@@ -8,3 +8,10 @@
   right: 10px;
   color: white;
 }
+.ufo-cursor {
+  cursor: url("./img/ufo.png"), auto;
+}
+
+body {
+  cursor: url("./img/ufo1.2.png"), auto;
+}

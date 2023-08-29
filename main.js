@@ -13,7 +13,7 @@ import uranusImg from "./img/uranus.jpg";
 import uranusRingImg from "./img/uranusRing.png";
 import venusImg from "./img/venus.jpg";
 import starImg from "./img/stars-1.jpg";
-import ufo from "./img/ufo.png";
+import ufo from "./img/ufo-svgrepo-com.png";
 import { Sphere } from "./Models/sphare";
 import { Ring } from "./Models/ring";
 
@@ -35,6 +35,10 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// renderer.domElement.style.cursor = "crosshair";
+// const customCursorURL = "url('./img/ufo-svgrepo-com.png'), grab";
+//renderer.domElement.style.cursor = "./img/ufo-svgrepo-com.png";
+// renderer.domElement.style.cursor = "grab";
 // Controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.update();
