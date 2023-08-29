@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export function Sphare(
+export function Sphere(
   radius,
   color = "#ffffff",
   map = null,
