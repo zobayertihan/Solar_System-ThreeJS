@@ -70,7 +70,7 @@ planetData.map((planet) => {
       <p>Diameter: ${planet.diameter}</p>
       <p>Distance from Sun: ${planet.distanceFromSun}</p>
       <p>${planet.description}</p>
-      <a href="/index.html" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 4px; border: none; cursor: pointer;">Back</a>
+      <a href="/" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 4px; border: none; cursor: pointer;">Back</a>
     `;
   }
 });
