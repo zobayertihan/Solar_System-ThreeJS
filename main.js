@@ -35,17 +35,9 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// renderer.domElement.style.cursor = "crosshair";
-// const customCursorURL = "url('./img/ufo-svgrepo-com.png'), grab";
-//renderer.domElement.style.cursor = "./img/ufo-svgrepo-com.png";
-// renderer.domElement.style.cursor = "grab";
 // Controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.update();
-
-//
-// const gridHelper = new THREE.GridHelper(500, 50);
-// scene.add(gridHelper);
 
 // Sun
 const sun = new Sphere(4, null, sunImg);
